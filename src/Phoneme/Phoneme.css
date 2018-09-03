@@ -1,17 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative|Sawarabi+Gothic");
+
 .Phoneme {
+    font-family: 'Signika Negative', sans-serif;
     display: inline-block;
     padding: 24px;
-    font-size: 36px;
-    color: blue;
+    font-size: 150px;
+    color: dodgerblue;
     background-color: lightyellow;
     text-align: center;
     margin: 6px;
     border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 10px 8px #888888;
     cursor: pointer;
 }
 
 
 .choice {
+    font-family: 'Signika Negative', sans-serif;
     display: inline-block;
     padding: 16px;
     font-size: 24px;
@@ -20,17 +26,64 @@
     text-align: center;
     margin: 6px;
     border: 2px solid black;
+    box-shadow: 5px 10px 8px #888888;
+    border-radius: 8px;
     cursor: pointer;
 
 }
 .chosen {
+    font-family: 'Signika Negative', sans-serif;
     display: inline-block;
     padding: 16px;
     font-size: 24px;
     text-align: center;
     margin: 6px;
     border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 10px 8px #888888;
     cursor: pointer;
     background-color: lightgreen;
-    color: white;
+    color: black;
+}
+.allBeg {
+    font-family: 'Signika Negative', sans-serif;
+    display: inline-block;
+    padding: 16px;
+    font-size: 24px;
+    text-align: center;
+    margin: 6px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 10px 8px #888888;
+    cursor: pointer;
+    background-color: lightgreen;
+    color: black;
+}
+.allMid {
+    font-family: 'Signika Negative', sans-serif;
+    display: inline-block;
+    padding: 16px;
+    font-size: 24px;
+    text-align: center;
+    margin: 6px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 10px 8px #888888;
+    cursor: pointer;
+    background-color: lightsalmon;
+    color: black;
+}
+.allEnd {
+    font-family: 'Signika Negative', sans-serif;
+    display: inline-block;
+    padding: 16px;
+    font-size: 24px;
+    text-align: center;
+    margin: 6px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 10px 8px #888888;
+    cursor: pointer;
+    background-color: plum;
+    color: black;
 }

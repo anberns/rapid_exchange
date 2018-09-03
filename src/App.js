@@ -4,10 +4,6 @@ import phonemeClasses from './Phoneme/Phoneme.css';
 import Phoneme from './Phoneme/Phoneme.js';
 import update from 'immutability-helper';
 
-const BEG_ARRAY = 23; // last index of beginning sounds in choices
-const MID_ARRAY = 33; // last index of middle sounds in choices
-const END_ARRAY = 47; // last index of ending sounds in choices
-
 class App extends Component {
     state = {
         // all phoneme choices
@@ -279,7 +275,7 @@ class App extends Component {
               <div>
                 <Phoneme
                     content="Select All Beginning Sounds"
-                    className={phonemeClasses.choice}
+                    className={phonemeClasses.allBeg}
                     id="allBeg"
                     click={(event) => this.chooseAll(event)}
                 />
@@ -297,7 +293,7 @@ class App extends Component {
                 <br></br>
                 <Phoneme
                     content="Select All Middle Sounds"
-                    className={phonemeClasses.choice}
+                    className={phonemeClasses.allMid}
                     id="allMid"
                     click={(event) => this.chooseAll(event)}
                 />
@@ -315,7 +311,7 @@ class App extends Component {
                 <br></br>
                 <Phoneme
                     content="Select All Ending Sounds"
-                    className={phonemeClasses.choice}
+                    className={phonemeClasses.allEnd}
                     id="allEnd"
                     click={(event) => this.chooseAll(event)}
                 />
@@ -334,7 +330,7 @@ class App extends Component {
 
           startButton = (
           <div>
-            <button onClick={this.startExchange}>Start</button>
+            <button onClick={this.startExchange} className={importedClasses.ownButton}>Start</button>
           </div>
         );
       }
@@ -354,7 +350,7 @@ class App extends Component {
         );
         eButton = (
             <div>
-                <button onClick={this.eHandler}>v-e</button>
+                <button onClick={this.eHandler} className={importedClasses.ownButton}>v-e</button>
             </div>
       );
         
