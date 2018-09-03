@@ -92,11 +92,45 @@ class App extends Component {
         phonemes[2].content = this.state.phonemeLists[2].list[0];
         this.setState({phonemes: phonemes}); 
     }
+    
+    // adds phonemes with .clicked = true to appropriate list based on id
+    loadPhonemes = () => {
+        const phonemes = [...this.state.choices];
+        const lists = [...this.state.phonemeLists];
+
+        for (let i = 0; i < phonemes.length; i++) {
+            if (phonemes[i].clicked) {
+                if (phonemes[i].type === "beg") {
+                    lists[0].list.push(phonemes[i].content);
+                } else if (phonemes[i].type === "mid") {
+                    lists[1].list.push(phonemes[i].content);
+                } else if (phonemes[i].type === "end") {
+                    lists[2].list.push(phonemes[i].content);
+                }
+            }
+        }
+        this.setState({phonemeLists: lists});
+    }
+
+    shufflePhonemes = () => {
+        const phonemeLists = [...this.state.phonemeLists];
+        for (let index = 0; index < phonemeLists.length; index++) {
+            for (let i = phonemeLists[index].list.length -1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                let temp = phonemeLists[index].list[i];
+                phonemeLists[index].list[i] = phonemeLists[index].list[j];
+                phonemeLists[index].list[j] = temp;
+            }
+        }
+        this.setState({phonemeLists: phonemeLists});
+    }
+
 
     // sets started flag, calls initial load functions
     startExchange = () => {
         this.setState({started: true});
         this.loadPhonemes();
+        this.shufflePhonemes();
         this.loadInitialSounds();
     }
 
@@ -150,25 +184,6 @@ class App extends Component {
         }        
         phonemes[index] = newState;
         this.setState({choices: phonemes});
-    }
-
-    // adds phonemes with .clicked = true to appropriate list based on id
-    loadPhonemes = () => {
-        const phonemes = [...this.state.choices];
-        const lists = [...this.state.phonemeLists];
-
-        for (let i = 0; i < phonemes.length; i++) {
-            if (phonemes[i].clicked) {
-                if (phonemes[i].type === "beg") {
-                    lists[0].list.push(phonemes[i].content);
-                } else if (phonemes[i].type === "mid") {
-                    lists[1].list.push(phonemes[i].content);
-                } else if (phonemes[i].type === "end") {
-                    lists[2].list.push(phonemes[i].content);
-                }
-            }
-        }
-        this.setState({phonemeLists: lists});
     }
 
     chooseAll(event) {
@@ -228,9 +243,9 @@ class App extends Component {
         }
     }
 
-    // need way to choose all in category
+    // need way to choose all in category without flipping back and forth on
+    // individual tiles
     // need to randomize selections
-    // need way to unclick choice
     // endings handler/ button, checks for magic e, remove each other
 
 
