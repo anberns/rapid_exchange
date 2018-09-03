@@ -1,0 +1,36 @@
+.Phoneme {
+    display: inline-block;
+    padding: 24px;
+    font-size: 36px;
+    color: blue;
+    background-color: lightyellow;
+    text-align: center;
+    margin: 6px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+
+.choice {
+    display: inline-block;
+    padding: 16px;
+    font-size: 24px;
+    color: black;
+    background-color: lightgray;
+    text-align: center;
+    margin: 6px;
+    border: 2px solid black;
+    cursor: pointer;
+
+}
+.chosen {
+    display: inline-block;
+    padding: 16px;
+    font-size: 24px;
+    text-align: center;
+    margin: 6px;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: lightgreen;
+    color: white;
+}
