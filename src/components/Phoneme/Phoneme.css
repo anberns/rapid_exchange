@@ -11,7 +11,7 @@
     margin: 6px;
     border: 2px solid black;
     border-radius: 8px;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 5px 5px #888888;
     cursor: pointer;
 }
 
@@ -19,14 +19,15 @@
 .choice {
     font-family: 'Signika Negative', sans-serif;
     display: inline-block;
-    padding: 16px;
-    font-size: 24px;
+    font-size: 1.7rem;
+    width: 60px;
+    height: 60px;
     color: black;
     background-color: lightgray;
     text-align: center;
     margin: 6px;
     border: 2px solid black;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 5px 5px #888888;
     border-radius: 8px;
     cursor: pointer;
 
@@ -34,13 +35,14 @@
 .chosenBeg {
     font-family: 'Signika Negative', sans-serif;
     display: inline-block;
-    padding: 16px;
-    font-size: 24px;
+    font-size: 1.7rem;
+    width: 60px;
+    height: 60px;
     text-align: center;
     margin: 6px;
     border: 2px solid black;
     border-radius: 8px;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 5px 5px #888888;
     cursor: pointer;
     background-color: lightgreen;
     color: black;
@@ -49,13 +51,14 @@
 .chosenMid {
     font-family: 'Signika Negative', sans-serif;
     display: inline-block;
-    padding: 16px;
-    font-size: 24px;
+    font-size: 1.7rem;
+    width: 60px;
+    height: 60px;
     text-align: center;
     margin: 6px;
     border: 2px solid black;
     border-radius: 8px;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 5px 5px #888888;
     cursor: pointer;
     background-color: lightsalmon;
     color: black;
@@ -64,13 +67,14 @@
 .chosenEnd {
     font-family: 'Signika Negative', sans-serif;
     display: inline-block;
-    padding: 16px;
-    font-size: 24px;
+    font-size: 1.7rem;
+    width: 60px;
+    height: 60px;
     text-align: center;
     margin: 6px;
     border: 2px solid black;
     border-radius: 8px;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 5px 5px #888888;
     cursor: pointer;
     background-color: plum;
     color: black;
@@ -78,13 +82,14 @@
 .allBeg {
     font-family: 'Signika Negative', sans-serif;
     display: inline-block;
-    padding: 16px;
-    font-size: 24px;
+    width: 350px;
+    height: 60px;
+    font-size: 1.4rem;
     text-align: center;
     margin: 6px;
     border: 2px solid black;
     border-radius: 8px;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 5px 5px #888888;
     cursor: pointer;
     background-color: lightgreen;
     color: black;
@@ -92,13 +97,14 @@
 .allMid {
     font-family: 'Signika Negative', sans-serif;
     display: inline-block;
-    padding: 16px;
-    font-size: 24px;
+    width: 350px;
+    height: 60px;
+    font-size: 1.4rem;
     text-align: center;
     margin: 6px;
     border: 2px solid black;
     border-radius: 8px;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 5px 5px #888888;
     cursor: pointer;
     background-color: lightsalmon;
     color: black;
@@ -106,13 +112,14 @@
 .allEnd {
     font-family: 'Signika Negative', sans-serif;
     display: inline-block;
-    padding: 16px;
-    font-size: 24px;
+    width: 350px;
+    height: 60px;
+    font-size: 1.4rem;
     text-align: center;
     margin: 6px;
     border: 2px solid black;
     border-radius: 8px;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 5px 5px #888888;
     cursor: pointer;
     background-color: plum;
     color: black;

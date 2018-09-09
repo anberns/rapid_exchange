@@ -5,6 +5,7 @@ import importedClasses from './ChoiceSelector.css';
 import phonemeClasses from '../../components/Phoneme/Phoneme.css';
 import Phoneme from '../../components/Phoneme/Phoneme.js';
 import update from 'immutability-helper';
+import Aux from '../../hoc/Aux';
 
 class ChoiceSelector extends Component {
     state = {
@@ -286,64 +287,73 @@ class ChoiceSelector extends Component {
           }
 
           choices = (
-              <div>
-                <Phoneme
-                    content="Select All Beginning Sounds"
-                    className={phonemeClasses.allBeg}
-                    id="allBeg"
-                    click={(event) => this.chooseAll(event)}
-                />
-                <br></br>
-                {begSounds.map((choice, index) => {
-                    return <Phoneme
-                    className={choice.currentClass}
-                    content={choice.content}
-                    value={choice.content}
-                    id={choice.id}
-                    click={(event) => this.chooseSound(event)}
+            <Aux>
+                <div className={importedClasses.selectorDivCenter}>
+                    <Phoneme
+                        content="Select All Beginning Sounds"
+                        className={phonemeClasses.allBeg}
+                        id="allBeg"
+                        click={(event) => this.chooseAll(event)}
                     />
-                })}
+                </div>
+                <div className={importedClasses.selectorDivCenter}>
+                    {begSounds.map((choice, index) => {
+                        return <Phoneme
+                        className={choice.currentClass}
+                        content={choice.content}
+                        value={choice.content}
+                        id={choice.id}
+                        click={(event) => this.chooseSound(event)}
+                        />
+                    })}
+                </div>
                 <br></br>
                 <br></br>
-                <Phoneme
-                    content="Select All Middle Sounds"
-                    className={phonemeClasses.allMid}
-                    id="allMid"
-                    click={(event) => this.chooseAll(event)}
-                />
-                <br></br>
-                {midSounds.map((choice, index) => {
-                    return <Phoneme
-                    className={choice.currentClass}
-                    content={choice.content}
-                    value={choice.content}
-                    id={choice.id}
-                    click={(event) => this.chooseSound(event)}
+                <div className={importedClasses.selectorDivCenter}>
+                    <Phoneme
+                        content="Select All Middle Sounds"
+                        className={phonemeClasses.allMid}
+                        id="allMid"
+                        click={(event) => this.chooseAll(event)}
                     />
-                })}
+                </div>
+                <div className={importedClasses.selectorDivCenter}>
+                    {midSounds.map((choice, index) => {
+                        return <Phoneme
+                        className={choice.currentClass}
+                        content={choice.content}
+                        value={choice.content}
+                        id={choice.id}
+                        click={(event) => this.chooseSound(event)}
+                        />
+                    })}
+                </div>
                 <br></br>
                 <br></br>
-                <Phoneme
-                    content="Select All Ending Sounds"
-                    className={phonemeClasses.allEnd}
-                    id="allEnd"
-                    click={(event) => this.chooseAll(event)}
-                />
-                <br></br>
-                {endSounds.map((choice, index) => {
-                    return <Phoneme
-                    className={choice.currentClass}
-                    content={choice.content}
-                    value={choice.content}
-                    id={choice.id}
-                    click={(event) => this.chooseSound(event)}
+                <div className={importedClasses.selectorDivCenter}>
+                    <Phoneme
+                        content="Select All Ending Sounds"
+                        className={phonemeClasses.allEnd}
+                        id="allEnd"
+                        click={(event) => this.chooseAll(event)}
                     />
-                })}
-              </div>
-            );
+                </div>
+                <div className={importedClasses.selectorDivCenter}>
+                    {endSounds.map((choice, index) => {
+                        return <Phoneme
+                        className={choice.currentClass}
+                        content={choice.content}
+                        value={choice.content}
+                        id={choice.id}
+                        click={(event) => this.chooseSound(event)}
+                        />
+                    })}
+                </div>
+            </Aux>
+        );
 
           startButton = (
-          <div>
+          <div className={importedClasses.selectorDivCenter}>
             <button onClick={this.startExchange} className={importedClasses.ownButton}>Start</button>
           </div>
         );
@@ -370,13 +380,22 @@ class ChoiceSelector extends Component {
         
       }
     return (
-      <div className={importedClasses.App}>
-        <h1>Rapid Exchange</h1>
-        {choices}
-        {startButton}
-        {phonemes}
-        {eButton}
-      </div>
+        <Aux>
+            <h1>Rapid Exchange</h1>
+            <div >
+                {choices}
+            </div>
+            <br></br><br></br>
+            <div>
+                {startButton}
+            </div>
+            <div>
+                {phonemes}
+            </div>
+            <div>
+                {eButton}
+            </div>
+      </Aux>
     );
   }
 }
