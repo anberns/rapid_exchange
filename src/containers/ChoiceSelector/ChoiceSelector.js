@@ -1,3 +1,5 @@
+// Break in ChoiceSelector and Exchange when routing learned
+
 import React, { Component } from 'react';
 import importedClasses from './ChoiceSelector.css';
 import phonemeClasses from '../../components/Phoneme/Phoneme.css';
@@ -167,10 +169,22 @@ class ChoiceSelector extends Component {
         let index = phonemes.findIndex((phoneme) => {return phoneme.id === id});
         if (index > -1) {
             if (phonemes[index].clicked === false) {
-                newState = update(this.state.choices[index], {
-                    clicked: {$set: true},
-                    currentClass: {$set: phonemeClasses.chosen}
-                });
+                if (phonemes[index].type === 'beg') {
+                    newState = update(this.state.choices[index], {
+                        clicked: {$set: true},
+                        currentClass: {$set: phonemeClasses.chosenBeg}
+                    });
+                } else if (phonemes[index].type === 'mid') {
+                    newState = update(this.state.choices[index], {
+                        clicked: {$set: true},
+                        currentClass: {$set: phonemeClasses.chosenMid}
+                    });
+                } else {
+                    newState = update(this.state.choices[index], {
+                        clicked: {$set: true},
+                        currentClass: {$set: phonemeClasses.chosenEnd}
+                    }); 
+                }
             } else {
                 newState = update(this.state.choices[index], {
                     clicked: {$set: false},
@@ -192,7 +206,7 @@ class ChoiceSelector extends Component {
                     if (phonemes[i].clicked === false) {
                         newState = update(this.state.choices[i], {
                             clicked: {$set: true},
-                            currentClass: {$set: phonemeClasses.chosen},
+                            currentClass: {$set: phonemeClasses.chosenBeg},
                         });
                     } else if (phonemes[i].clicked === true) {
                         newState = update(this.state.choices[i], {
@@ -208,7 +222,7 @@ class ChoiceSelector extends Component {
                     if (phonemes[i].clicked === false) {
                         newState = update(this.state.choices[i], {
                             clicked: {$set: true},
-                            currentClass: {$set: phonemeClasses.chosen},
+                            currentClass: {$set: phonemeClasses.chosenMid},
                         });
                     } else if (phonemes[i].clicked === true) {
                         newState = update(this.state.choices[i], {
@@ -224,7 +238,7 @@ class ChoiceSelector extends Component {
                     if (phonemes[i].clicked === false) {
                         newState = update(this.state.choices[i], {
                             clicked: {$set: true},
-                            currentClass: {$set: phonemeClasses.chosen},
+                            currentClass: {$set: phonemeClasses.chosenEnd},
                         });
                     } else if (phonemes[i].clicked === true) {
                         newState = update(this.state.choices[i], {

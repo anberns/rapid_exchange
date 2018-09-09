@@ -31,7 +31,7 @@
     cursor: pointer;
 
 }
-.chosen {
+.chosenBeg {
     font-family: 'Signika Negative', sans-serif;
     display: inline-block;
     padding: 16px;
@@ -43,6 +43,36 @@
     box-shadow: 5px 10px 8px #888888;
     cursor: pointer;
     background-color: lightgreen;
+    color: black;
+}
+
+.chosenMid {
+    font-family: 'Signika Negative', sans-serif;
+    display: inline-block;
+    padding: 16px;
+    font-size: 24px;
+    text-align: center;
+    margin: 6px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 10px 8px #888888;
+    cursor: pointer;
+    background-color: lightsalmon;
+    color: black;
+}
+
+.chosenEnd {
+    font-family: 'Signika Negative', sans-serif;
+    display: inline-block;
+    padding: 16px;
+    font-size: 24px;
+    text-align: center;
+    margin: 6px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 10px 8px #888888;
+    cursor: pointer;
+    background-color: plum;
     color: black;
 }
 .allBeg {
