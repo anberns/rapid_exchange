@@ -5,7 +5,7 @@ import importedClasses from './ChoiceSelector.css';
 import phonemeClasses from '../../components/Phoneme/Phoneme.css';
 import Phoneme from '../../components/Phoneme/Phoneme.js';
 import update from 'immutability-helper';
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Aux/Aux';
 
 class ChoiceSelector extends Component {
     state = {
@@ -288,6 +288,8 @@ class ChoiceSelector extends Component {
 
           choices = (
             <Aux>
+                <br></br>
+                <br></br>
                 <div className={importedClasses.selectorDivCenter}>
                     <Phoneme
                         content="Select All Beginning Sounds"
@@ -361,7 +363,7 @@ class ChoiceSelector extends Component {
 
       if (this.state.started) {
           phonemes = (
-          <div>
+          <div className={importedClasses.selectorDivCenter}>
             {this.state.phonemes.map((phoneme, index) => {
                 return <Phoneme
                 content={phoneme.content}
@@ -373,7 +375,7 @@ class ChoiceSelector extends Component {
           </div>
         );
         eButton = (
-            <div>
+            <div className={importedClasses.selectorDivCenter}>
                 <button onClick={this.eHandler} className={importedClasses.ownButton}>v-e</button>
             </div>
       );
@@ -381,7 +383,6 @@ class ChoiceSelector extends Component {
       }
     return (
         <Aux>
-            <h1>Rapid Exchange</h1>
             <div >
                 {choices}
             </div>

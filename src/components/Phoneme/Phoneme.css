@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Signika+Negative|Sawarabi+Gothic");
-
 .Phoneme {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'OpenDyslexicRegular';
     display: inline-block;
     padding: 24px;
     font-size: 150px;
@@ -17,7 +15,7 @@
 
 
 .choice {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'OpenDyslexicRegular';
     display: inline-block;
     font-size: 1.7rem;
     width: 60px;
@@ -33,7 +31,7 @@
 
 }
 .chosenBeg {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'OpenDyslexicRegular';
     display: inline-block;
     font-size: 1.7rem;
     width: 60px;
@@ -49,7 +47,7 @@
 }
 
 .chosenMid {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'OpenDyslexicRegular';
     display: inline-block;
     font-size: 1.7rem;
     width: 60px;
@@ -65,7 +63,7 @@
 }
 
 .chosenEnd {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'OpenDyslexicRegular';
     display: inline-block;
     font-size: 1.7rem;
     width: 60px;
@@ -80,7 +78,7 @@
     color: black;
 }
 .allBeg {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'OpenDyslexicRegular';
     display: inline-block;
     width: 350px;
     height: 60px;
@@ -95,7 +93,7 @@
     color: black;
 }
 .allMid {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'OpenDyslexicRegular';
     display: inline-block;
     width: 350px;
     height: 60px;
@@ -110,7 +108,7 @@
     color: black;
 }
 .allEnd {
-    font-family: 'Signika Negative', sans-serif;
+    font-family:'OpenDyslexicRegular';
     display: inline-block;
     width: 350px;
     height: 60px;
