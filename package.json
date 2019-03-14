@@ -53,7 +53,7 @@
   },
   "scripts": {
     "start": "node start",
-    "build": "nod build",
+    "build": "node build",
     "test": "node test --env=jsdom",
     "eject": "node eject"
   },
